@@ -66,7 +66,8 @@ def generate_map(data: list):
 
     mp.save('./templates/twitter.html')
 
+    return 'twitter.html'
+
 
 if __name__ == "__main__":
     pprint(generate_map(get_coordinates(twitter_api("BarackObama"))))
-    # app.run()

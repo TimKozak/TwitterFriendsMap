@@ -4,7 +4,7 @@ from tools import get_coordinates, generate_map, twitter_api
 app = Flask(__name__)
 
 
-@app.route('/home', methods=["GET", "POST"])
+@app.route('/', methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         token = request.form.get('token')

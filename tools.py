@@ -4,8 +4,6 @@ from geopy.geocoders import Nominatim
 import folium
 from pprint import pprint
 
-TOKEN = "AAAAAAAAAAAAAAAAAAAAAIKvMwEAAAAAGfXtAizYuenmkYuQLZ4qCDL%2F3n8%3D0Bqy4HA6TVWqzcYq7Nk9UK0slRiRyVZvlEBtpyowkdXOupLBNf"
-
 
 def twitter_api(tweet_tag: str, token: str) -> dict:
     """

@@ -4,14 +4,16 @@ from geopy.geocoders import Nominatim
 import folium
 from pprint import pprint
 
+TOKEN = "AAAAAAAAAAAAAAAAAAAAAIKvMwEAAAAAGfXtAizYuenmkYuQLZ4qCDL%2F3n8%3D0Bqy4HA6TVWqzcYq7Nk9UK0slRiRyVZvlEBtpyowkdXOupLBNf"
 
-def twitter_api(tweet_tag: str) -> dict:
+
+def twitter_api(tweet_tag: str, token: str) -> dict:
     """
     Get json from twitter.
     """
     base_url = "https://api.twitter.com/"
 
-    bearer_token = ""
+    bearer_token = token
 
     search_url = '{}1.1/friends/list.json'.format(base_url)
 
@@ -53,7 +55,6 @@ def generate_map(data: list):
     """
     Generate HTML map with location markers.
     """
-
     mp = folium.Map(location=(data[0][0]), zoom_start=10)
 
     for info in data:
@@ -70,4 +71,4 @@ def generate_map(data: list):
 
 
 if __name__ == "__main__":
-    pprint(generate_map(get_coordinates(twitter_api("BarackObama"))))
+    pprint(generate_map(get_coordinates(twitter_api("BarackObama", TOKEN))))

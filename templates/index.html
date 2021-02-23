@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TwitterMap</title>
 </head>
 <body>
     <form method="POST">
-        <center><p style='margin-top: 150px; '><b>ENTER TWITTER TAG</b></p></center>
-        <center><input type='text' name='user' style='background-color: skyblue; border: black; height: 20px; width: 200px; margin-top: 5px;'></center>
+        <center><p style='margin-top: 150px; color: grey;'><b>TWITTER FRIENDS LOCATION MAP</b></p></center>
+        <center><input type='text' name='token' placeholder="Twitter API token" style='background-color: skyblue; border: black; height: 20px; width: 400px; margin-top: 0px;'></center>
+        <center><input type='text' name='user' placeholder="User tag (without @)" style='background-color: skyblue; border: black; height: 20px; width: 400px; margin-top: 5px;'></center>
+        <center><button type='submit' value="Submit" style='background-color: grey; border: black; height: 20px; width: 400px; margin-top: 5px;'>Generate map</button></center>
     </form>
 </body>
 </html>

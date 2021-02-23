@@ -69,4 +69,4 @@ def generate_map(data: list):
 
 
 if __name__ == "__main__":
-    pprint(generate_map(get_coordinates(twitter_api("BarackObama", TOKEN))))
+    # pprint(generate_map(get_coordinates(twitter_api("BarackObama", TOKEN))))
